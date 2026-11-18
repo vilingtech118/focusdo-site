@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title data-i18n-title data-ten="FocusDo — Do what matters" data-tfr="FocusDo — Fais ce qui compte" data-tzhhans="FocusDo — 做重要的事">FocusDo — Do what matters</title>
+  <meta name="description" content="FocusDo sorts every task into the Eisenhower matrix — urgent, important, both or neither — so the next right thing is always obvious. For iPhone." />
+  <meta name="theme-color" content="#c4b5fd" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="FocusDo — Do what matters" />
+  <meta property="og:description" content="The Eisenhower matrix, beautifully done for iPhone. No account, no tracking." />
+  <meta property="og:image" content="assets/icon.png" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Sans+SC:wght@400;600&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav glass">
+    <a class="brand" href="./"><img src="assets/icon.png" alt="" width="32" height="32" />FocusDo</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="opt" href="#features" data-i18n="nav.features">Features</a>
+      <a class="opt" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+    </nav>
+    <label class="lang"><span class="visually-hidden" hidden>Language</span>
+      <select id="lang" aria-label="Language">
+        <option value="en">EN</option><option value="fr">FR</option><option value="zh-Hans">中文</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow rise" style="--d:0" data-i18n="hero.eyebrow">Eisenhower matrix · for iPhone</span>
+          <h1 class="rise" style="--d:1; margin-top:22px" data-i18n="hero.title">Do what <em>matters</em>.<br>Drop the rest.</h1>
+          <p class="lede rise" style="--d:2" data-i18n="hero.lede">FocusDo sorts every task into four boxes — urgent, important, both, or neither — so the next right thing is always obvious.</p>
+          <div class="actions rise" style="--d:3">
+            <a class="btn btn-primary" href="#get" aria-label="Coming soon on the App Store">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.33-3.55zM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+              <span><small data-i18n="cta.soon">Coming soon</small><span data-i18n="cta.store">on the App Store</span></span>
+            </a>
+            <a class="btn btn-ghost" href="#how" data-i18n="cta.how">See how it works</a>
+          </div>
+        </div>
+
+        <div class="rise" style="--d:2">
+          <div class="matrix glass" role="img" aria-label="The four quadrants of the Eisenhower matrix">
+            <span class="axis axis-x" data-i18n="axis.urgent">Urgent →</span>
+            <span class="axis axis-y" data-i18n="axis.important">Important →</span>
+            <div class="quad q-do">
+              <h4><i></i><span data-i18n="q.do">Do now</span></h4>
+              <div class="chip" style="--i:0;--fx:60px;--fy:-50px;--fr:8deg" data-i18n="t1">Send the Q4 report</div>
+              <div class="chip" style="--i:4;--fx:-30px;--fy:70px;--fr:-10deg" data-i18n="t2">Call the client back</div>
+              <span class="orb"></span>
+            </div>
+            <div class="quad q-delegate">
+              <h4><i></i><span data-i18n="q.delegate">Delegate</span></h4>
+              <div class="chip" style="--i:2;--fx:-70px;--fy:-30px;--fr:-7deg" data-i18n="t5">Order office supplies</div>
+              <div class="chip done" style="--i:6;--fx:40px;--fy:60px;--fr:6deg" data-i18n="t6">Reply to the poll</div>
+              <span class="orb"></span>
+            </div>
+            <div class="quad q-schedule">
+              <h4><i></i><span data-i18n="q.schedule">Schedule</span></h4>
+              <div class="chip" style="--i:1;--fx:80px;--fy:40px;--fr:-6deg" data-i18n="t3">Plan the summer trip</div>
+              <div class="chip" style="--i:5;--fx:-40px;--fy:-60px;--fr:9deg" data-i18n="t4">Read “Deep Work”</div>
+              <span class="orb"></span>
+            </div>
+            <div class="quad q-eliminate">
+              <h4><i></i><span data-i18n="q.eliminate">Eliminate</span></h4>
+              <div class="chip" style="--i:3;--fx:-60px;--fy:-40px;--fr:7deg" data-i18n="t7">Sort old photos</div>
+              <div class="chip done" style="--i:7;--fx:30px;--fy:50px;--fr:-8deg" data-i18n="t8">Unsubscribe from spam</div>
+              <span class="orb"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span style="--c:var(--do)"><i></i><b data-i18n="q.do" style="font-weight:inherit">Do now</b></span>
+        <span style="--c:var(--schedule)"><i></i><b data-i18n="q.schedule" style="font-weight:inherit">Schedule</b></span>
+        <span style="--c:var(--delegate)"><i></i><b data-i18n="q.delegate" style="font-weight:inherit">Delegate</b></span>
+        <span style="--c:var(--eliminate)"><i></i><b data-i18n="q.eliminate" style="font-weight:inherit">Eliminate</b></span>
+        <span style="--c:var(--do)"><i></i><b data-i18n="q.do" style="font-weight:inherit">Do now</b></span>
+        <span style="--c:var(--schedule)"><i></i><b data-i18n="q.schedule" style="font-weight:inherit">Schedule</b></span>
+        <span style="--c:var(--delegate)"><i></i><b data-i18n="q.delegate" style="font-weight:inherit">Delegate</b></span>
+        <span style="--c:var(--eliminate)"><i></i><b data-i18n="q.eliminate" style="font-weight:inherit">Eliminate</b></span>
+        <span style="--c:var(--do)"><i></i><b data-i18n="q.do" style="font-weight:inherit">Do now</b></span>
+        <span style="--c:var(--schedule)"><i></i><b data-i18n="q.schedule" style="font-weight:inherit">Schedule</b></span>
+        <span style="--c:var(--delegate)"><i></i><b data-i18n="q.delegate" style="font-weight:inherit">Delegate</b></span>
+        <span style="--c:var(--eliminate)"><i></i><b data-i18n="q.eliminate" style="font-weight:inherit">Eliminate</b></span>
+        <span style="--c:var(--do)"><i></i><b data-i18n="q.do" style="font-weight:inherit">Do now</b></span>
+        <span style="--c:var(--schedule)"><i></i><b data-i18n="q.schedule" style="font-weight:inherit">Schedule</b></span>
+        <span style="--c:var(--delegate)"><i></i><b data-i18n="q.delegate" style="font-weight:inherit">Delegate</b></span>
+        <span style="--c:var(--eliminate)"><i></i><b data-i18n="q.eliminate" style="font-weight:inherit">Eliminate</b></span>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <section id="how">
+      <div class="wrap how">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="how.eyebrow">How it works</span>
+          <h2 style="margin-top:18px" data-i18n="how.title">Four boxes.<br><em>One</em> decision.</h2>
+          <ol class="steps">
+            <li class="glass" style="--c:var(--do)"><b>1</b><div><strong data-i18n="how.s1.t">Do now</strong><p data-i18n="how.s1.p">Urgent and important. Your day starts here.</p></div></li>
+            <li class="glass" style="--c:var(--schedule)"><b>2</b><div><strong data-i18n="how.s2.t">Schedule</strong><p data-i18n="how.s2.p">Important, not urgent.</p></div></li>
+            <li class="glass" style="--c:var(--delegate)"><b>3</b><div><strong data-i18n="how.s3.t">Delegate</strong><p data-i18n="how.s3.p">Urgent, not important.</p></div></li>
+            <li class="glass" style="--c:var(--eliminate)"><b>4</b><div><strong data-i18n="how.s4.t">Eliminate</strong><p data-i18n="how.s4.p">Neither.</p></div></li>
+          </ol>
+        </div>
+        <div class="phones reveal">
+          <div class="phone"><img data-shot="list:light" alt="FocusDo task list" loading="lazy" /></div>
+          <div class="phone"><img data-shot="matrix" alt="FocusDo matrix screen" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="feat.eyebrow">Everything you need</span>
+          <h2 style="margin-top:18px" data-i18n="feat.title">Built for focus, <em>not</em> for busywork.</h2>
+          <p data-i18n="feat.lede">A calm, native iPhone app.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card glass span-4 reveal" style="--c:var(--do)">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+            <h3 data-i18n="f.focus.t">A focus timer on your Lock Screen</h3>
+            <p data-i18n="f.focus.p">Start a Pomodoro from any task.</p>
+            <div class="island" aria-hidden="true">
+              <span class="ring"></span>
+              <div><span data-i18n="f.focus.task">Prepare Monday’s pitch</span><small data-i18n="f.focus.phase">Focus</small></div>
+              <b>17:42</b>
+            </div>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:#a855f7">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg></div>
+            <h3 data-i18n="f.widget.t">Today, on your Home Screen</h3>
+            <p data-i18n="f.widget.p">A widget keeps your “Do now” list one glance away.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:var(--schedule)">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+            <h3 data-i18n="f.cal.t">A calendar that thinks ahead</h3>
+            <p data-i18n="f.cal.p">Due dates, reminders and recurring tasks.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:var(--delegate)">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3 data-i18n="f.stats.t">See your week</h3>
+            <p data-i18n="f.stats.p">Tasks done, streaks, and where your time went.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:#06b6d4">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.34 9.5 4 4 0 0 0 6.5 19z"/></svg></div>
+            <h3 data-i18n="f.sync.t">Synced through your iCloud</h3>
+            <p data-i18n="f.sync.p">Stored in your own private iCloud.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:#22c55e">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8l4 4-4 4M6 8l-4 4 4 4M2 12h20"/></svg></div>
+            <h3 data-i18n="f.gesture.t">Fast, native gestures</h3>
+            <p data-i18n="f.gesture.p">Swipe to complete, snooze or delete.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:#8b5cf6">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M12 4v16"/></svg></div>
+            <h3 data-i18n="f.duo.t">Ready for foldables</h3>
+            <p data-i18n="f.duo.p">On a large inner display, the whole matrix sits beside your list.</p>
+          </article>
+          <article class="card glass span-2 reveal" style="--c:#ec4899">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <h3 data-i18n="f.lang.t">Speaks your language</h3>
+            <p data-i18n="f.lang.p">English, Français, 简体中文 — and a beautiful dark mode.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="gal.eyebrow">A closer look</span>
+          <h2 style="margin-top:18px" data-i18n="gal.title">Calm by <em>design</em>.</h2>
+        </div>
+        <div class="gallery reveal" tabindex="0" aria-label="Screenshots">
+          <figure><div class="phone"><img data-shot="matrix:light" alt="" loading="lazy" /></div><figcaption data-i18n="gal.matrix">The matrix</figcaption></figure>
+          <figure><div class="phone"><img data-shot="list:light" alt="" loading="lazy" /></div><figcaption data-i18n="gal.list">Every task, searchable</figcaption></figure>
+          <figure><div class="phone"><img data-shot="calendar:light" alt="" loading="lazy" /></div><figcaption data-i18n="gal.calendar">Calendar</figcaption></figure>
+          <figure><div class="phone"><img data-shot="stats:light" alt="" loading="lazy" /></div><figcaption data-i18n="gal.stats">Your week in numbers</figcaption></figure>
+          <figure><div class="phone"><img data-shot="matrix:dark" alt="" loading="lazy" /></div><figcaption data-i18n="gal.dark">Dark mode</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy pledge -->
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="pledge glass reveal">
+          <div>
+            <h2 data-i18n="pledge.title">Your tasks are <em>yours</em>.</h2>
+            <p class="lede" style="max-width:44ch" data-i18n="pledge.p">FocusDo has no account and no server.</p>
+            <div class="actions"><a class="btn btn-ghost" href="privacy.html" style="padding-left:0"><span data-i18n="pledge.link">Read the privacy policy</span> →</a></div>
+          </div>
+          <ul>
+            <li data-i18n="pledge.l1">No account to create</li>
+            <li data-i18n="pledge.l2">No tracking, no analytics</li>
+            <li data-i18n="pledge.l3">No ads, ever</li>
+            <li data-i18n="pledge.l4">Export your data anytime</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="get" class="cta" style="padding-top:0">
+      <div class="wrap reveal">
+        <img src="assets/icon.png" alt="FocusDo app icon" width="112" height="112" />
+        <h2 data-i18n="final.title">Clear head.<br><em>Clear</em> list.</h2>
+        <p class="lede" data-i18n="final.lede">FocusDo is coming to the App Store. Free to download.</p>
+        <div class="actions">
+          <span class="btn btn-primary" aria-disabled="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.33-3.55zM14.18 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+            <span><small data-i18n="cta.soon">Coming soon</small><span data-i18n="cta.store">on the App Store</span></span>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span data-i18n="foot.rights">© 2026 VilingTech.</span>
+      <nav aria-label="Footer">
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+        <a data-contact href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
