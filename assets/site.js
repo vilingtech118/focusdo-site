@@ -3,7 +3,7 @@
    and every page switches from the GitHub fallback to a mailto link. */
 
 const CONTACT = {
-  email: "", // e.g. "hello@example.com" — empty until the support address is ready
+  email: "vilingtech@gmail.com",
   fallback: "https://github.com/vilingtech118/focusdo-site/issues/new",
 };
 
