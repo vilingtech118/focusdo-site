@@ -11,6 +11,7 @@ const LANGS = ["en", "fr", "zh-Hans"];
 
 const T = {
   en: {
+    "nav.changelog": "What's new", "cl.eyebrow": "What's new", "cl.title": "Release <em>notes</em>", "cl.lede": "Every version of FocusDo, newest first.",
     "nav.features": "Features", "nav.privacy": "Privacy", "nav.support": "Support",
     "hero.eyebrow": "Eisenhower matrix · for iPhone",
     "hero.title": "Do what <em>matters</em>.<br>Drop the rest.",
@@ -52,6 +53,7 @@ const T = {
     "doc.updated": "Last updated: 18 November 2026",
   },
   fr: {
+    "nav.changelog": "Nouveautés", "cl.eyebrow": "Nouveautés", "cl.title": "Notes de <em>version</em>", "cl.lede": "Toutes les versions de FocusDo, de la plus récente à la plus ancienne.",
     "nav.features": "Fonctionnalités", "nav.privacy": "Confidentialité", "nav.support": "Aide",
     "hero.eyebrow": "Matrice d’Eisenhower · pour iPhone",
     "hero.title": "Fais ce qui <em>compte</em>.<br>Oublie le reste.",
@@ -93,6 +95,7 @@ const T = {
     "doc.updated": "Dernière mise à jour : 18 novembre 2026",
   },
   "zh-Hans": {
+    "nav.changelog": "更新日志", "cl.eyebrow": "更新日志", "cl.title": "版本<em>更新</em>", "cl.lede": "FocusDo 的每个版本，最新的在最上面。",
     "nav.features": "功能", "nav.privacy": "隐私", "nav.support": "帮助",
     "hero.eyebrow": "艾森豪威尔矩阵 · iPhone 版",
     "hero.title": "做<em>重要</em>的事，<br>放下其余的。",
@@ -176,6 +179,27 @@ function applyContact(lang) {
   });
 }
 
+// Release notes: assets/changelog.json is appended by the app repo's CI on
+// every user-facing merge (newest first).
+let changelog = null;
+function renderChangelog(lang) {
+  const list = document.getElementById("changelog");
+  if (!list || !changelog) return;
+  const fmt = new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric" });
+  list.replaceChildren(...changelog.map((e) => {
+    const li = document.createElement("li");
+    const h = document.createElement("h2");
+    h.textContent = e.version;
+    const d = document.createElement("time");
+    d.dateTime = e.date;
+    d.textContent = fmt.format(new Date(`${e.date}T12:00:00`));
+    const p = document.createElement("p");
+    p.textContent = e.notes[lang] || e.notes.en;
+    li.append(h, d, p);
+    return li;
+  }));
+}
+
 function setLang(lang) {
   const dict = T[lang];
   document.documentElement.lang = lang;
@@ -192,6 +216,7 @@ function setLang(lang) {
   if (sel) sel.value = lang;
   applyShots(lang);
   applyContact(lang);
+  renderChangelog(lang);
   try { localStorage.setItem("focusdo-lang", lang); } catch (_) { /* ignore */ }
 }
 
@@ -201,6 +226,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const sel = document.getElementById("lang");
   if (sel) sel.addEventListener("change", (e) => { lang = e.target.value; setLang(lang); });
   dark.addEventListener?.("change", () => applyShots(lang));
+  if (document.getElementById("changelog")) {
+    fetch("assets/changelog.json", { cache: "no-cache" })
+      .then((r) => r.json())
+      .then((data) => { changelog = data; renderChangelog(lang); })
+      .catch(() => { /* list stays empty */ });
+  }
 
   const els = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
