@@ -1,0 +1,11 @@
+[
+  {
+    "version": "1.1",
+    "date": "2026-11-20",
+    "notes": {
+      "en": "First release: the Eisenhower matrix, a Pomodoro timer in the Dynamic Island, calendar, stats, widget and iCloud sync.",
+      "fr": "Première version : la matrice d'Eisenhower, un minuteur Pomodoro dans la Dynamic Island, calendrier, statistiques, widget et synchro iCloud.",
+      "zh-Hans": "首个版本：四象限矩阵、灵动岛番茄钟、日历、统计、小组件和 iCloud 同步。"
+    }
+  }
+]
