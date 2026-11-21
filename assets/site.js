@@ -179,8 +179,8 @@ function applyContact(lang) {
   });
 }
 
-// Release notes: assets/changelog.json is appended by the app repo's CI on
-// every user-facing merge (newest first).
+// Release notes: one entry per App Store release, newest first, added by the
+// app repo's scripts/release.sh.
 let changelog = null;
 function renderChangelog(lang) {
   const list = document.getElementById("changelog");
@@ -193,9 +193,17 @@ function renderChangelog(lang) {
     const d = document.createElement("time");
     d.dateTime = e.date;
     d.textContent = fmt.format(new Date(`${e.date}T12:00:00`));
-    const p = document.createElement("p");
-    p.textContent = e.notes[lang] || e.notes.en;
-    li.append(h, d, p);
+    // A release's notes are one sentence or a list of them (one per change).
+    const notes = e.notes[lang] || e.notes.en;
+    let body;
+    if (Array.isArray(notes)) {
+      body = document.createElement("ul");
+      body.append(...notes.map((n) => { const item = document.createElement("li"); item.textContent = n; return item; }));
+    } else {
+      body = document.createElement("p");
+      body.textContent = notes;
+    }
+    li.append(h, d, body);
     return li;
   }));
 }

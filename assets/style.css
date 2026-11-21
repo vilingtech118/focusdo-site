@@ -366,3 +366,5 @@ html[lang="zh-Hans"] [data-lang-block="zh-Hans"] { display: block; }
 .changelog h2 { display: inline; margin: 0 12px 0 0 !important; font-size: clamp(24px, 2.6vw, 30px); }
 .changelog time { color: var(--ink-soft); font-size: 15px; }
 .changelog p { margin: 8px 0 0; }
+.changelog ul { margin: 8px 0 0; padding-left: 1.2em; }
+.changelog ul li { padding: 0; border: 0; margin: 4px 0; color: var(--ink-soft); }
