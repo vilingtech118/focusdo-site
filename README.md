@@ -1,6 +1,6 @@
-# FocusDo — website
+# Matrio — website
 
-Public site for the FocusDo iPhone app: landing page, privacy policy and support.
+Public site for the Matrio iPhone app: landing page, privacy policy and support.
 Plain HTML/CSS/JS, served by GitHub Pages. No build step, no tracking.
 
 - `index.html` — landing page
