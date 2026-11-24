@@ -7,42 +7,30 @@
         "Pomodoro: when a focus ends, you choose — a break, another focus or task done. No more breaks starting on their own.",
         "Fixed a crash when tapping a notification.",
         "FocusDo is now Matrio: same app, new name.",
-        "Rate FocusDo on the App Store at the right moment, without being nagged.",
         "Tasks list: the first task no longer hides under the filter bar.",
         "Lighter, easier-to-read typography.",
-        "On Mac: matrix view, drag and drop between quadrants, and a Settings window (sync, backup, notifications).",
-        "On Mac, a clear message when the network blocks iCloud syncing.",
         "iPhone Duo: in landscape, Stats shows two columns, one on each side of the fold.",
         "iPhone Duo: the calendar now lays out correctly on the cover display and in landscape.",
-        "Larger text in the Mac task list and sidebar.",
         "Lighter Stats: numbers and titles are no longer bold."
       ],
       "fr": [
         "Pomodoro : à la fin d’un focus, vous choisissez — pause, nouveau focus ou tâche terminée. Plus de pauses qui démarrent seules.",
         "Correction d’un plantage en touchant une notification.",
         "FocusDo devient Matrio : même app, nouveau nom.",
-        "Donnez votre avis sur l’App Store au bon moment, sans être dérangé.",
         "Liste des tâches : la première tâche ne se cache plus sous la barre de filtres.",
         "Une typographie plus légère et plus lisible.",
-        "Sur Mac : vue matrice, glisser-déposer entre quadrants et fenêtre Réglages (synchronisation, sauvegarde, notifications).",
-        "Sur Mac, un message clair quand le réseau empêche la synchronisation iCloud.",
         "iPhone Duo : en paysage, les statistiques s'affichent sur deux colonnes, de part et d'autre du pli.",
         "iPhone Duo : le calendrier s'affiche correctement sur l'écran extérieur et en paysage.",
-        "Texte plus grand dans la liste et la barre latérale sur Mac.",
         "Statistiques plus légères : chiffres et titres moins gras."
       ],
       "zh-Hans": [
         "番茄钟：专注结束后由你选择休息、继续专注或完成任务，不再自动开始休息。",
         "修复点击通知时 App 崩溃的问题。",
         "FocusDo 更名为 Matrio：还是同一个 App，换了新名字。",
-        "在合适的时机邀请你在 App Store 评分，不打扰。",
         "任务列表：第一条任务不再被筛选栏挡住。",
         "字体排版更轻盈、更易读。",
-        "Mac 版新增矩阵视图、在象限之间拖放任务，以及设置窗口（同步、备份、通知）。",
-        "Mac 版在网络导致 iCloud 无法同步时，会明确提示原因。",
         "iPhone Duo：横屏时统计页分两栏，以折痕为界。",
         "iPhone Duo：日历在外屏和横屏下显示正常了。",
-        "Mac 版任务列表和侧边栏字体更大，更易阅读。",
         "统计页更清爽：数字和标题不再加粗。"
       ]
     }
